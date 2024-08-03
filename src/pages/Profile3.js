@@ -26,6 +26,16 @@ function Profile3({ profileData }) {
   const [selectedKeywords, setSelectedKeywords] = useState([]);
   const [isNextEnabled, setIsNextEnabled] = useState(false);
 
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   useEffect(() => {
     setIsNextEnabled(introduction.trim().length > 0);
   }, [introduction]);

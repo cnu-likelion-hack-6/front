@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../styles/KakaoId.css';
 
@@ -12,8 +12,18 @@ function KakaoId() {
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const navigate = useNavigate();
 
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   const kakaoIdInput = () => {
-    const token = localStorage.getItem('accessToken')
+    const token = localStorage.getItem('accessToken');
 
     fetch('http://54.80.162.117:8080/members/profile/kakaoId', {
       method: 'POST',

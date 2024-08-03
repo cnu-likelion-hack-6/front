@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from 'react-router-dom';
 import "../styles/SignUp1.css";
 
@@ -14,6 +14,16 @@ function SignUp1() {
 
   const [ isPasswordMatch, setIsPasswordMatch ] = useState(true);
   const [ nextPage, setNextPage ] = useState('회원 가입하기');
+
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const signUp = () => {
     fetch('http://54.80.162.117:8080/members', {

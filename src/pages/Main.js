@@ -33,6 +33,15 @@ function Main() {
   const [selectedOption, setSelectedOption] = useState('');
   const [ profileName, setProfileName ] = useState('');
   const [ profileIcon, setProfileIcon ] = useState(null);
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     fetch('http://54.80.162.117:8080/members/my', {
@@ -49,9 +58,11 @@ function Main() {
       return response.json();
     })
     .then(data => {
+      console.log("data: ", data);
       setProfileName(data.name || '');
       setProfileIcon(data.profileIcon ? data.profileIcon : null);
       console.log("profile : ", profileIcon);
+      console.log("name : ", profileName);
     })
     .catch(error => {
       console.error('Error fetching profile data:', error);

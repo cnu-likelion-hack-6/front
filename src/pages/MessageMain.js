@@ -11,6 +11,28 @@ function MessageMain() {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      const token = localStorage.getItem('accessToken');
+    fetch('http://54.80.162.117:8080/matches/thanks', {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`,
+      },
+    })
+    .then(response => response.json())
+    .then(data => {
+      setMessages(data);
+    })
+    .catch(error => {
+      console.error('Error fetching messages:', error);
+    });
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
     const token = localStorage.getItem('accessToken');
     fetch('http://54.80.162.117:8080/matches/thanks', {
       method: 'GET',

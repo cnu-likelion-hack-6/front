@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../styles/Profile1.css';
 
@@ -18,6 +18,16 @@ function Profile1({ setProfileData }) {
 
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ isError, setIsError ] = useState(false);
+
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleNext = () => {
     if (name === "" || gender === "" || department === "" || classOf === "" || studentStatus === "" || grade === "" || age === ""){

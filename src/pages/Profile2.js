@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/Profile2.css';
 
@@ -43,6 +43,16 @@ function Profile2({ setProfileData }) {
 
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [isIconSelected, setIsIconSelected] = useState(false);
+
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleIconClick = (index) => {
     if (!isIconSelected) {

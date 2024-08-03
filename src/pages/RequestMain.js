@@ -13,22 +13,43 @@ function RequestMain() {
   const navigate = useNavigate();
   
   useEffect(() => {
-    fetch('http://54.80.162.117:8080/matches/candidates', {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
-      },
-    })
-    .then(response => response.json())
-    .then(data => {
-      console.log("Fetched candidates: ", data);
-      setCandidates(data);
-    })
-    .catch(error => {
-      console.error('Error fetching candidates:', error);
-    });
+    const interval = setInterval(() => {
+      fetch('http://54.80.162.117:8080/matches/candidates', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
+        },
+      })
+      .then(response => response.json())
+      .then(data => {
+        setCandidates(data);
+      })
+      .catch(error => {
+        console.error('Error fetching candidates:', error);
+      });
+
+    }, 1000);
+    return () => clearInterval(interval);
   }, []);
+  
+  // useEffect(() => {
+  //   fetch('http://54.80.162.117:8080/matches/candidates', {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json',
+  //       'Authorization': `Bearer ${localStorage.getItem('accessToken')}`,
+  //     },
+  //   })
+  //   .then(response => response.json())
+  //   .then(data => {
+  //     console.log("Fetched candidates: ", data);
+  //     setCandidates(data);
+  //   })
+  //   .catch(error => {
+  //     console.error('Error fetching candidates:', error);
+  //   });
+  // }, []);
 
   const onClickFilter = () => {
     navigate('/filter');

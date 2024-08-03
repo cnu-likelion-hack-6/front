@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
@@ -13,6 +13,16 @@ function Filter() {
   const [genderPreference, setGenderPreference] = useState("");
   const [yearRange, setYearRange] = useState({ start: "", end: "" });
   const [differentDepartment, setDifferentDepartment] = useState("");
+
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const handleNextClick = () => {
     const filterData = {

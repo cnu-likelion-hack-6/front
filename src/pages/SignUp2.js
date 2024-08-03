@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import '../styles/SignUp2.css';
 
@@ -15,6 +15,16 @@ function SignUp2() {
   const [ isError, setIsError ] = useState(true);
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ userName, setUserName ] = useState('');
+
+  const [, setUpdate ] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setUpdate(prev => prev + 1);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   const logIn = () => {
     fetch('http://54.80.162.117:8080/members/login', {
