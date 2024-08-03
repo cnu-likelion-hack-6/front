@@ -1,0 +1,20 @@
+.input2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 20px;
+}
+
+.input2_container {
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FFF3E7;
+
+  width: 140px;
+}
+
+.input2_container:focus {
+  outline: none;
+}

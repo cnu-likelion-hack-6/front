@@ -1,0 +1,32 @@
+.Profile2 {
+  text-align: center;
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px; /* 위아래와 좌우 간격을 동일하게 설정 */
+  justify-items: center;
+  margin-top: 20px;
+}
+
+.select-button-container {
+  margin-top: 20px;
+}
+
+.button-container .Button {
+  margin: 10px;
+}
+
+.next-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.button-container .Button {
+  background: #FFD8BE; /* 다음 단계 버튼의 색상 */
+  height: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  border-radius: 40px;
+}

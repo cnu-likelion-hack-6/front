@@ -1,0 +1,109 @@
+.filter-text {
+  font-size: 17px;
+  color: #6C6363;
+  font-weight: 700;
+}
+
+.filter-age {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  width: 280px;
+}
+
+.age-range-display {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #6C6363;
+}
+
+.filter-gender {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 7px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-group .Button {
+  background: #FFF3E7;
+  width: 300px;
+  height: 40px;
+}
+
+.button-group .Button.active {
+  background: #D1F1FF;
+  border: 3px solid #82D9FF;
+}
+
+.filter-classOf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.year-range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #6C6363;
+}
+
+.underline-input {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  padding: 5px;
+  width: 70px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.underline-input:focus {
+  outline: none;
+  border-bottom-color: #B8B8FF;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.button-group-dif {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.button-group-dif .Button {
+  width: 140px;
+  height: 40px;
+  background: #FFF3E7;
+}
+
+.button-group-dif .Button.active {
+  background: #D1F1FF;
+  border: 3px solid #82D9FF;
+}
+
+.next-button-container {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.rc-slider-mark-text {
+  font-size: 12px;
+}

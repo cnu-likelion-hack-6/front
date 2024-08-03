@@ -1,0 +1,35 @@
+.SendButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  outline: none;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  height: 35px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-size: 10px;
+  background: #B8B8FF;
+  margin: 5px;
+}
+
+.SendButton.active {
+  background: #F4F4F4;
+  border: 2px solid #E1E1E1;
+}
+
+.SendButton.next {
+  background: #FFD8BE;
+  height: 3rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  border-radius: 40px;
+}
+
+.SendButton:disabled {
+  background: #B8B8FF;
+  cursor: not-allowed;
+}

@@ -1,0 +1,65 @@
+* {
+  margin: 0px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 3px;
+}
+
+.input_title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-left: 10px;
+}
+
+.input_container {
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FFF3E7;
+
+  width: 300px;
+}
+
+.input_container:focus {
+  outline: none;
+}
+
+.input_explain {
+  font-size: 10px;
+  color: #ACACAC;
+}
+
+.input_title_wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.input_button_container {
+  /* display: flex;
+  
+  align-items: flex-end; */
+}
+
+.input_button {
+  padding: 20px;
+  border-radius: 30px;
+  border: none;
+  background-color: #FFF3E7;
+
+  width: 140px;
+  margin: 0px 5px 0px 5px;
+  font-size: 17px;
+  color: #4F4F4F;
+  font-weight: 700;
+}

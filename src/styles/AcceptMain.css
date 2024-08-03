@@ -1,0 +1,32 @@
+.acceptMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+
+  padding-bottom: 70px;
+}
+
+.accept_count {
+  display: flex;
+  gap: 3px;
+  justify-content: flex-end;
+  width: 100%;
+  font-size: 15px;
+  color: #565656;
+  font-weight: 700;
+  margin-right: 80px;
+  margin-top: 20px;
+}
+
+.rice_image {
+  margin-top: 2px;
+  width: 15px;
+  height: 15px;
+}
+
+.messageMain_container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

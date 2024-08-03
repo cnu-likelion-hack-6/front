@@ -1,0 +1,23 @@
+.MultiButton {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    outline: none;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    height: 45px;
+    width: 90px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 18px;
+    background: #B8B8FF;
+    margin: 5px;
+  }
+  
+  .MultiButton.active {
+    background: #D1F1FF; /* 선택 버튼이 활성화된 상태의 색상 */
+    border: 3px solid #82D9FF;
+  }
+  

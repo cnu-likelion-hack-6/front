@@ -1,0 +1,127 @@
+.Like_button {
+  width: 140px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #565656;
+  border: 1px solid #E1E1E1;
+  border-radius: 10px;
+  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.Like_image {
+  width: 20px;
+  height: 20px;
+}
+
+.Like_button.activeLike {
+  background-color: #FB8E8E;
+  color: #ffffff;
+  border: 1px solid #FF6262;
+}
+
+.Like_button.activeBad {
+  background-color: #B8B8FF;
+  color: #ffffff;
+  border: 1px solid #7272FF;
+}
+
+.people_button {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.peopleKakao_button {
+  width: 290px;
+  height: 35px;
+  color: #565656;
+  background-color: #ffffff;
+  border: 1px solid #E1E1E1;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.peopleKakao_image {
+  width: 25px;
+  height: 25px;
+}
+
+.ShowKakaoId {
+  background-color: #ffffff;
+  border: 2px solid #E1E1E1;
+  width: 300px;
+  height: 180px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.ShowKakaoId_profile {
+  width: 65px;
+  height: 65px;
+  border-radius: 20px;
+  background-color: #FFF3E7;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ShowKakaoId_id {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+
+.ShowKakaoId_id p {
+  font-size: 14px;
+  color: #6A6A6A;
+}
+
+.people {
+  position: relative;
+}
+
+.thank_icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+.thank_icon_image {
+  width: 30px;
+  height: 30px;
+}
+
+.message_thank {
+  font-size: 14px;
+  color: #565656;
+}
+
+.thankMessage {
+  background-color: #f4f4f4;
+  width: 280px;
+  height: 35px;
+  border: 2px solid #E1E1E1;
+  outline: none;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.input_message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

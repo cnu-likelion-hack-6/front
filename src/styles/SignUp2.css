@@ -1,0 +1,9 @@
+.signUp2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+
+  justify-content: space-between;
+  height: 100vh;
+}
