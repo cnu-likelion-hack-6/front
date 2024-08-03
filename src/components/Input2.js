@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/Input2.css";
 
-function Input2({ title, value, onChange, type = "text" }) {
+function Input2({ title, value, onChange, type = "text", placeholder }) {
   return (
     <div className="input">
       <div className="input_wrapper">
@@ -12,6 +12,7 @@ function Input2({ title, value, onChange, type = "text" }) {
           type={ type }
           value={ value }
           onChange={(e) => onChange(e.target.value)}
+          placeholder={placeholder}
         />
       </div>
     </div>

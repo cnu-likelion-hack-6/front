@@ -102,6 +102,7 @@ function Profile1({ setProfileData }) {
             title={"학번"} 
             value={classOf}
             onChange={setClassOf}
+            placeholder={"예) 19"}
           />
 
           <div className="input_wrapper">
@@ -124,11 +125,13 @@ function Profile1({ setProfileData }) {
             title={"학년"} 
             value={grade}
             onChange={setGrade}
+            placeholder={"예) 2"}
           />
           <Input2 
             title={"나이"} 
             value={age}
             onChange={setAge}
+            placeholder={"예) 23"}
           />
         </div>
 
