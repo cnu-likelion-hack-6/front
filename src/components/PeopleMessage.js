@@ -20,13 +20,7 @@ function PeopleMessage({ matchId, thankMessage, setThankMessage, handleSendMessa
       },
       body: JSON.stringify({ message: thankMessage })
     })
-    .then(response => response.json())
-    .then(data => {
-      console.log('Message sent:', data);
-      handleSendMessage(); // 성공적으로 메시지를 보냈을 때 처리
-      setThankMessage(""); // 입력 필드 초기화
-      alert("감사 메시지가 성공적으로 전송되었습니다!");
-    })
+    .then(response => alert("감사 인사를 보냈습니다."))
     .catch(error => {
       console.error('Error sending message:', error);
     });
