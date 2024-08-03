@@ -64,7 +64,7 @@ function RequestMain() {
       <CurrentStatus status={localStorage.getItem('selectedOption')} />
 
       <div>
-        {candidates.map((candidate) => (
+        {candidates && candidates.map((candidate) => (
           <RequestPeople
             key={candidate.memberId}
             memberId={candidate.memberId}

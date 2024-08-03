@@ -60,7 +60,7 @@ function MessageMain() {
       </div>
 
       <div className="messageMain_container">
-        {messages.map((message, index) => (
+        {messages && messages.map((message, index) => (
         <Message
           key={index}
           profileIcon={message.profileIcon}

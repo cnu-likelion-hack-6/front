@@ -62,7 +62,7 @@ function MatchingMain() {
                 매칭 현황
             </div>
             <div>
-                {peopleData.map((person, index) => {
+                {peopleData && peopleData.map((person, index) => {
                         if (person.buyerInfo != null) {
                             {
                                 return (
