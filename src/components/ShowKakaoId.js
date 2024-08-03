@@ -24,17 +24,11 @@ const profileIconMap = {
   ICON_9: image09
 };
 
-function ShowKakaoId({profileIcon}) {
+function ShowKakaoId({kakaoId}) {
   return (
     <div className="ShowKakaoId">
-      <div className="ShowKakaoId_profile">
-        <img src={profileIconMap[profileIcon]} className="people_icon"/>
-      </div>
-      <p className="people_name">박지훈</p>
-      <p className="people_explain">충남대학교 전자공학과 2학년</p>
       <div className="ShowKakaoId_id">
-        <img src={peopleKakaoId} className="peopleKakao_image" />
-        <p>rladk99!@</p>
+        <p>{kakaoId}</p>
       </div>
     </div>
   );
