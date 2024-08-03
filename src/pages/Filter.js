@@ -119,7 +119,7 @@ function Filter() {
             onChange={(e) => setYearRange({ ...yearRange, end: e.target.value })}
             className="underline-input"
           />
-        </div>`
+        </div>
       </div>
       
       <div className='filter-group'>
