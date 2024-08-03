@@ -9,7 +9,28 @@ import '../styles/AcceptMain.css';
 function MatchingMain() {
     const [peopleData, setPeopleData] = useState([]);
 
-  useEffect(() => {
+    useEffect(() => {
+        const token = localStorage.getItem('accessToken');
+
+        fetch('http://54.80.162.117:8080/matches', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${token}`
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log("peopleData : ", data);
+                setPeopleData(data);
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    }, []);
+
+
+    useEffect(() => {
     const interval = setInterval(() => {
       const token = localStorage.getItem('accessToken');
 
@@ -33,25 +54,6 @@ function MatchingMain() {
     return () => clearInterval(interval);
   }, []);
 
-    useEffect(() => {
-        const token = localStorage.getItem('accessToken');
-
-        fetch('http://54.80.162.117:8080/matches', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log("peopleData : ", data);
-                setPeopleData(data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }, []);
 
 
     return (
