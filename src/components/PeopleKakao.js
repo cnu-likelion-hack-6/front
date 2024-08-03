@@ -72,7 +72,7 @@ function PeopleKakao({ matchId, name, profileIcon, memberId, kakaoId, university
           </div>
 
           <div className="keyword_wrapper">
-            {keywords.map((keyword, index) => (
+            {keywords && keywords.map((keyword, index) => (
               <Keyword key={index} value={keyword} />
             ))}
           </div>
