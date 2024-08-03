@@ -55,7 +55,7 @@ function AcceptMain() {
           />
         ))}
       </div>
-      <PeopleLike
+      {/* <PeopleLike
           matchRequestId={0}
           name={"박지훈"}
           profileIcon={"ICON_1"}
@@ -66,7 +66,7 @@ function AcceptMain() {
           age={24}
           brief={"성실한 청년"}
           keywords={["진로"]}
-        />
+        /> */}
 
       <BottomNav />
     </div>

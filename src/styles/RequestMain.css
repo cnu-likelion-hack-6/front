@@ -6,3 +6,16 @@
   gap: 20px;
   padding-bottom: 70px;
 }
+
+.filterButton {
+  width: 100px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+
+}
+
+.filterButton:hover {
+  box-shadow: inset 1px 1px 5px #7e7e7e;
+
+}

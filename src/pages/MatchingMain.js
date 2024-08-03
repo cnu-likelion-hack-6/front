@@ -57,7 +57,7 @@ function MatchingMain() {
         ))}
       </div>
       
-      <PeopleKakao 
+      {/* <PeopleKakao 
         kakaoId={"string"}
         matchId={0}
         matchRequestId={0}
@@ -70,7 +70,7 @@ function MatchingMain() {
         age={24}
         brief={"성실한 청년"}
         keywords={["진로"]}
-      />
+      /> */}
       
       <BottomNav />
     </div>

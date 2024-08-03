@@ -51,8 +51,7 @@ function MessageMain() {
         />
         ))}
       </div>
-        
-      <Message
+      {/* <Message
           key={0}
           profileIcon={"ICON_1"}
           name={"박지훈"}
@@ -61,7 +60,7 @@ function MessageMain() {
           grade={2}
           classOf={23}
           message={"고마워~!"}
-        />
+        /> */}
         
       <BottomNav />
     </div>
