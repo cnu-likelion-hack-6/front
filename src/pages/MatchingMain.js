@@ -30,29 +30,29 @@ function MatchingMain() {
     }, []);
 
 
-    useEffect(() => {
-    const interval = setInterval(() => {
-      const token = localStorage.getItem('accessToken');
-
-        fetch('http://54.80.162.117:8080/matches', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${token}`
-            }
-        })
-            .then(response => response.json())
-            .then(data => {
-                console.log("peopleData : ", data);
-                setPeopleData(data);
-            })
-            .catch(error => {
-                console.error('Error fetching data:', error);
-            });
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
+    // useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         const token = localStorage.getItem('accessToken');
+    //
+    //         fetch('http://54.80.162.117:8080/matches', {
+    //             method: 'GET',
+    //             headers: {
+    //                 'Content-Type': 'application/json',
+    //                 'Authorization': `Bearer ${token}`
+    //             }
+    //         })
+    //             .then(response => response.json())
+    //             .then(data => {
+    //                 console.log("peopleData : ", data);
+    //                 setPeopleData(data);
+    //             })
+    //             .catch(error => {
+    //                 console.error('Error fetching data:', error);
+    //             });
+    //     }, 1000);
+    //
+    //     return () => clearInterval(interval);
+    // }, []);
 
 
 
