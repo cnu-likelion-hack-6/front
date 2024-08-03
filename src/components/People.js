@@ -85,7 +85,7 @@ function People({ memberId, profileIcon, name, universityName, major, grade, cla
       </div>
 
       <div className="keyword_wrapper">
-        {keywords.map((keyword, index) => (
+        {keywords && keywords?.map((keyword, index) => (
           <Keyword key={index} value={keyword} />
         ))}
       </div>
