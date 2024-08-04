@@ -63,7 +63,6 @@ function Profile3({ profileData }) {
       alert(`오류가 발생했습니다: ${error.message}`);
     });
   };
-  
 
   return (
     <div className="Profile">

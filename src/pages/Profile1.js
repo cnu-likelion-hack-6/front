@@ -49,7 +49,7 @@ function Profile1({ setProfileData }) {
 
   const onCheckEnter = (e) => {
     if (e.key === 'Enter') {
-      handleData();
+      handleNext();
     }
   };
 

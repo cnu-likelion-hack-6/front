@@ -44,16 +44,6 @@ function Profile2({ setProfileData }) {
   const [selectedIcon, setSelectedIcon] = useState(null);
   const [isIconSelected, setIsIconSelected] = useState(false);
 
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handleIconClick = (index) => {
     if (!isIconSelected) {
       setSelectedIcon(index);
@@ -88,7 +78,6 @@ function Profile2({ setProfileData }) {
       imagePath={path}
     />
   ));
-
 
   return (
     <div className="Profile">
