@@ -15,17 +15,6 @@ function SchoolCheck() {
 
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ isError, setIsError ] = useState(true);
-
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   
   // POST : email 로 인증 코드 전송
   // 오류 발생 : 인증 코드 전송에 실패했습니다.
@@ -40,14 +29,6 @@ function SchoolCheck() {
       },
       body: JSON.stringify({ email: email })
     })
-      // .then(response => {
-      //   if (!response.ok) {
-      //     return response.json().then(error => {
-      //       throw new Error(error.message);
-      //     });
-      //   }
-      //   return response;
-      // })
       .then(result => {
         console.log('result : ', result);
         alert('인증코드가 전송되었습니다.');
@@ -57,9 +38,7 @@ function SchoolCheck() {
         console.error('Error:', error);
         alert(`서버 오류가 발생했습니다: ${error.message}`);
       });
-
-    // 임시로 인증코드가 확인되지 않아도 되도록 해놓음
-    setShowCodeInput(true); 
+    // setShowCodeInput(true);
   };
 
 
@@ -99,7 +78,6 @@ function SchoolCheck() {
   }
 
   // POST : code 로 인증 코드 확인 
-  // 오류 발생 : 이메일 확인 코드가 일치하지 않습니다.
   const handleCodeCertificate = () => {
     const token = localStorage.getItem('accessToken');
 
@@ -136,6 +114,12 @@ function SchoolCheck() {
     navigate('/Profile1');
   }
 
+  const onCheckEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleNextStep();
+    }
+  };
+
   return(
     <div className="SchoolCheck">
 
@@ -165,6 +149,7 @@ function SchoolCheck() {
               title={"인증번호 4자리 입력"}
               value={code}
               onChange={setCode}
+              onKeyDown={onCheckEnter}
             />
             <button 
               className="SchoolCheck_button"

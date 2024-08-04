@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import '../styles/KakaoId.css';
 
 import Input from '../components/Input';
@@ -10,17 +10,6 @@ function KakaoId() {
   const [ kakaoId, setKakaoId ] = useState('');
   const [ isError, setIsError ] = useState(true);
   const [ nextPage, setNextPage ] = useState('다음 단계');
-  const navigate = useNavigate();
-
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const kakaoIdInput = () => {
     const token = localStorage.getItem('accessToken');
@@ -38,12 +27,12 @@ function KakaoId() {
           alert(result.message);
         }
         console.log("결과 : ", result);
-        navigate('/SchoolCheck');
+        Navigate('/SchoolCheck');
       })
   }
 
   const handleNextStep = () => {
-    if (kakaoId === "") {
+    if (kakaoId === '') {
       setNextPage("카카오톡 아이디를 입력해주세요");
       setIsError(false);
       return;
@@ -52,6 +41,12 @@ function KakaoId() {
     kakaoIdInput();
     setNextPage("다음 단계");
   }
+
+  const onCheckEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleNextStep();
+    }
+  };
 
   return(
     <div className="KakaoId">
@@ -68,6 +63,7 @@ function KakaoId() {
             title={"아이디 입력"} 
             value={kakaoId}
             onChange={setKakaoId}
+            onKeyDown={ onCheckEnter }
           />
           <div className="KakaoId_explain">
             <p className="KakaoId_explain_1">내 아이디를 모르겠어요</p>
@@ -87,6 +83,7 @@ function KakaoId() {
         </div>
         
       </div>
+
 
       <button 
         onClick={ handleNextStep }

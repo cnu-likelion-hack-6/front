@@ -33,15 +33,7 @@ function Main() {
   const [selectedOption, setSelectedOption] = useState('');
   const [ profileName, setProfileName ] = useState('');
   const [ profileIcon, setProfileIcon ] = useState(null);
-  const [, setUpdate ] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   useEffect(() => {
     fetch('http://54.80.162.117:8080/members/my', {

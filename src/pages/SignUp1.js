@@ -15,16 +15,6 @@ function SignUp1() {
   const [ isPasswordMatch, setIsPasswordMatch ] = useState(true);
   const [ nextPage, setNextPage ] = useState('회원 가입하기');
 
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const signUp = () => {
     fetch('http://54.80.162.117:8080/members', {
       method: 'POST',
@@ -64,6 +54,12 @@ function SignUp1() {
     setNextPage('다음 단계');
   };
 
+  const onCheckEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleNextStep();
+    }
+  };
+
   return(
     <div className="signUp1">
 
@@ -82,18 +78,21 @@ function SignUp1() {
             title={"전화번호"} 
             value={ phone }
             onChange={ setPhone }
+            onKeyDown={ onCheckEnter }
           />
           <Input 
             title={"비밀번호"} 
             value={ password }
             type="password"
             onChange={ setPassword }
+            onKeyDown={ onCheckEnter }
           />
           <Input 
             title={"비밀번호 확인"}
             value={ confirmPassword }
             type="password"
             onChange={ setConfirmPassword } 
+            onKeyDown={ onCheckEnter }
           />
         </div>
       </div>

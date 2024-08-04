@@ -16,16 +16,6 @@ function SignUp2() {
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ userName, setUserName ] = useState('');
 
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const logIn = () => {
     fetch('http://54.80.162.117:8080/members/login', {
       method: "POST",
@@ -85,6 +75,12 @@ function SignUp2() {
     setNextPage("다음 단계");
   }
 
+  const onCheckEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleNextStep();
+    }
+  };
+
   return(
     <div className="signUp2">
 
@@ -102,12 +98,14 @@ function SignUp2() {
             title={"전화번호"} 
             value={ phone }
             onChange={ setPhone }
+            onKeyDown={ onCheckEnter }
           />
           <Input 
             title={"비밀번호"} 
             value={ password }
             type="password"
             onChange={ setPassword }
+            onKeyDown={ onCheckEnter }
           />
         </div>
       </div>

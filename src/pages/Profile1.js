@@ -19,16 +19,6 @@ function Profile1({ setProfileData }) {
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ isError, setIsError ] = useState(false);
 
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handleNext = () => {
     if (name === "" || gender === "" || department === "" || classOf === "" || studentStatus === "" || grade === "" || age === ""){
       setNextPage('모든 정보를 입력해주세요');
@@ -57,6 +47,12 @@ function Profile1({ setProfileData }) {
     }));
   }
 
+  const onCheckEnter = (e) => {
+    if (e.key === 'Enter') {
+      handleData();
+    }
+  };
+
   return(
     <div className="Profile">
 
@@ -70,6 +66,7 @@ function Profile1({ setProfileData }) {
           title={"이름"} 
           value={name}
           onChange={setName}
+          onKeyDown={onCheckEnter}
         />
 
         <div className="input">
@@ -103,6 +100,7 @@ function Profile1({ setProfileData }) {
               placeholder="예) 컴퓨터융합학부" 
               value={department}
               onChange={((e) => setDepartment(e.target.value))}
+              onKeyDown={onCheckEnter}
             />
           </div>
         </div>
@@ -113,6 +111,7 @@ function Profile1({ setProfileData }) {
             value={classOf}
             onChange={setClassOf}
             placeholder={"예) 19"}
+            onKeyDown={onCheckEnter}
           />
 
           <div className="input_wrapper">
@@ -136,12 +135,14 @@ function Profile1({ setProfileData }) {
             value={grade}
             onChange={setGrade}
             placeholder={"예) 2"}
+            onKeyDown={onCheckEnter}
           />
           <Input2 
             title={"나이"} 
             value={age}
             onChange={setAge}
             placeholder={"예) 23"}
+            onKeyDown={onCheckEnter}
           />
         </div>
 

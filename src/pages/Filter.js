@@ -14,16 +14,6 @@ function Filter() {
   const [yearRange, setYearRange] = useState({ start: "", end: "" });
   const [differentDepartment, setDifferentDepartment] = useState("");
 
-  const [, setUpdate ] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setUpdate(prev => prev + 1);
-    }, 1000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   const handleNextClick = () => {
     const filterData = {
       minAge: ageRange[0],
