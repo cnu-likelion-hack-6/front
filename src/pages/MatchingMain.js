@@ -12,7 +12,8 @@ function MatchingMain() {
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
 
-        fetch('http://54.80.162.117:8080/matches', {
+        //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches', {
+        fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +35,7 @@ function MatchingMain() {
     //     const interval = setInterval(() => {
     //         const token = localStorage.getItem('accessToken');
     //
-    //         fetch('http://54.80.162.117:8080/matches', {
+    //         fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches', {
     //             method: 'GET',
     //             headers: {
     //                 'Content-Type': 'application/json',

@@ -36,7 +36,8 @@ function Main() {
 
 
   useEffect(() => {
-    fetch('http://54.80.162.117:8080/members/my', {
+    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/my', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/my', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -71,7 +72,8 @@ function Main() {
 
     const token = localStorage.getItem('accessToken');
 
-    fetch('http://54.80.162.117:8080/filters/side', {
+    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/filters/side', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/filters/side', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
