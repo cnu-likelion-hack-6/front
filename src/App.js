@@ -24,7 +24,6 @@ function App() {
 
   return (
     <RootLayout>
-      <BrowserRouter>
       <Routes>
         <Route path='/Main' element={<Main />}/>
         <Route path='/' element={<SignUp1 />} />
@@ -43,7 +42,6 @@ function App() {
         <Route path='/MessageMain' element={<MessageMain />} />
         
       </Routes>
-      </BrowserRouter>
     </RootLayout>
   );
 }
