@@ -42,8 +42,6 @@ function Message({ profileIcon, name, universityName, major, grade, classOf, mes
       </div>
       
       <div className="message_text">
-        {/* <p>오늘 밥 같이 먹어서 좋았어 ~</p> */}
-        {/* <p>다음에 족보 필요하면 언제든지 연락해 !</p> */}
         <p>{message}</p>
       </div>
 

@@ -76,18 +76,6 @@ function AcceptMain() {
           />
         ))}
       </div>
-      {/* <PeopleLike
-          matchRequestId={0}
-          name={"박지훈"}
-          profileIcon={"ICON_1"}
-          universityName={"충남대학교"}
-          major={"전자공학과"}
-          grade={2}
-          classOf={23}
-          age={24}
-          brief={"성실한 청년"}
-          keywords={["진로"]}
-        /> */}
 
       <BottomNav />
     </div>

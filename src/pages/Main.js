@@ -125,13 +125,6 @@ function Main() {
         className="SchoolCheck_button"
         onClick={handleComplete}
       >설정 완료</button>
-{/* 
-      <div>
-        <Link to={`/SignUp`}>page</Link>
-      </div>
-      <div>
-        <Link to={`/RequestMain`}>RequestMain</Link>
-      </div> */}
     </div>
   );
 }

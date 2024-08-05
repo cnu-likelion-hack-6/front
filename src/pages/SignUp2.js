@@ -5,9 +5,6 @@ import '../styles/SignUp2.css';
 import logo from "../images/logo.png"
 import Input from "../components/Input";
 
-// 전화번호 : 01012341234
-// 비밀번호 : 1234
-
 function SignUp2() {
   const navigate = useNavigate();
   const [ phone, setPhone ] = useState('');

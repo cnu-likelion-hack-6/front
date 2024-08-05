@@ -17,7 +17,6 @@ function SignUp1() {
 
   const signUp = () => {
     fetch('http://54.80.162.117:8080/members', {
-    //fetch('http://localhost:8080/members', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

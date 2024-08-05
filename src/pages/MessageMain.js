@@ -75,16 +75,6 @@ function MessageMain() {
         />
         ))}
       </div>
-      {/* <Message
-          key={0}
-          profileIcon={"ICON_1"}
-          name={"박지훈"}
-          universityName={"충남대학교"}
-          major={"컴퓨터융합학부"}
-          grade={2}
-          classOf={23}
-          message={"고마워~!"}
-        /> */}
         
       <BottomNav />
     </div>
