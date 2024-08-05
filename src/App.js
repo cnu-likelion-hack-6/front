@@ -1,6 +1,6 @@
 import './App.css';
 import React, { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import SignUp1 from './pages/SignUp1';
 import KakaoId from './pages/KakaoId';
@@ -24,6 +24,7 @@ function App() {
 
   return (
     <RootLayout>
+      <BrowserRouter>
       <Routes>
         <Route path='/Main' element={<Main />}/>
         <Route path='/' element={<SignUp1 />} />
@@ -42,6 +43,7 @@ function App() {
         <Route path='/MessageMain' element={<MessageMain />} />
         
       </Routes>
+      </BrowserRouter>
     </RootLayout>
   );
 }
