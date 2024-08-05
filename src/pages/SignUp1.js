@@ -16,7 +16,7 @@ function SignUp1() {
   const [ nextPage, setNextPage ] = useState('회원 가입하기');
 
   const signUp = () => {
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
