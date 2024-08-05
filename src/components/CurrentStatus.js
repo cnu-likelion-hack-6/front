@@ -3,7 +3,7 @@ import warning from '../images/warning.png';
 
 import '../styles/CurrentStatus.css';
 
-function CurrentStatus({ status }) {
+function CurrentStatus({ status, onStatusChange }) {
 
   return(
     <div className="status">
@@ -17,6 +17,7 @@ function CurrentStatus({ status }) {
 
         <button 
           className={`status_select ${status === 'BUYER' ? 'active' : ''}`}
+          onClick={() => onStatusChange('BUYER')}
         >
           <div className="status_circle red"></div>
           <p className="status_select_text">사줄래요</p>
@@ -24,6 +25,7 @@ function CurrentStatus({ status }) {
 
         <button 
           className={`status_select ${status === 'TAKER' ? 'active' : ''}`}
+          onClick={() => onStatusChange('TAKER')}
         >
           <div className="status_circle blue"></div>
           <p className="status_select_text">사주세요</p>
@@ -31,6 +33,7 @@ function CurrentStatus({ status }) {
 
         <button 
           className={`status_select ${status === 'BOTH' ? 'active' : ''}`}
+          onClick={() => onStatusChange('BOTH')}
         >
           <div className="status_circle green"></div>
           <p className="status_select_text">둘 다 좋아요</p>

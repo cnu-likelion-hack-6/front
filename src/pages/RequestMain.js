@@ -10,6 +10,7 @@ import "../styles/Main.css";
 
 function RequestMain() {
   const [candidates, setCandidates] = useState([]);
+  const [selectedOption, setSelectedOption] = useState(localStorage.getItem('selectedOption') || 'BOTH');
   const navigate = useNavigate();
 
     useEffect(() => {
@@ -52,6 +53,26 @@ function RequestMain() {
   //   return () => clearInterval(interval);
   // }, []);
 
+  const handleStatusChange = (newStatus) => {
+    setSelectedOption(newStatus);
+    localStorage.setItem('selectedOption', newStatus);
+
+    fetch('http://54.80.162.117:8080/filters/side', {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('accessToken')}`
+      },
+      body: JSON.stringify({ state: newStatus })
+    })
+    .then(result => {
+      console.log('State successfully updated:', result);
+      alert('설정이 완료되었습니다.');
+    })
+    .catch(error => {
+      console.error('Error updating state:', error);
+    });
+  }
 
   const onClickFilter = () => {
     navigate('/filter');
@@ -63,7 +84,11 @@ function RequestMain() {
       <button className="filterButton" onClick={onClickFilter}>
         필터 재설정
       </button>
-      <CurrentStatus status={localStorage.getItem('selectedOption')} />
+      <CurrentStatus 
+        //status={localStorage.getItem('selectedOption')} 
+        status={selectedOption}
+        onStatusChange={handleStatusChange}
+      />
 
       <div>
         {candidates && candidates?.map((candidate) => (
