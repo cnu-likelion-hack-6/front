@@ -95,7 +95,7 @@ function SchoolCheck() {
           setCodeCertificate(true);
           alert("이메일 인증이 완료되었습니다.");
         } else {
-          alert(response.message);
+          alert("인증에 실패했습니다.");
         }
       })
       .catch(error => {
