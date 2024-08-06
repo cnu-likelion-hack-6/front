@@ -12,7 +12,7 @@ function AcceptMain() {
   
   // useEffect(() => {
   //   const interval = setInterval(() => {
-  //     fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/acceptable-match-request', {
+  //     fetch('http://54.80.162.117:8080/matches/acceptable-match-request', {
   //       method: 'GET',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -32,8 +32,8 @@ function AcceptMain() {
   // }, []);
 
   useEffect(() => {
-    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/acceptable-match-request', {
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/acceptable-match-request', {
+    //fetch('http://54.80.162.117:8080/matches/acceptable-match-request', {
+    fetch('http://54.80.162.117:8080/matches/acceptable-match-request', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

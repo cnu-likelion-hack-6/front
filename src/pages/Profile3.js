@@ -47,7 +47,7 @@ function Profile3({ profileData }) {
     };
     console.log('result: ', finalProfileData);
 
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile', {
+    fetch('http://54.80.162.117:8080/members/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

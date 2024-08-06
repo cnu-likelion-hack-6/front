@@ -14,8 +14,8 @@ function KakaoId() {
   const kakaoIdInput = () => {
     const token = localStorage.getItem('accessToken');
 
-    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile/kakaoId', {
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile/kakaoId', {
+    //fetch('http://54.80.162.117:8080/members/profile/kakaoId', {
+    fetch('http://54.80.162.117:8080/members/profile/kakaoId', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
