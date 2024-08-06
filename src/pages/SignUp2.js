@@ -14,7 +14,7 @@ function SignUp2() {
   const [ userName, setUserName ] = useState('');
 
   const logIn = () => {
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/login', {
+    fetch('/api/members/login', {
       method: "POST",
       headers: {
         'Content-Type' : 'application/json'
@@ -41,7 +41,7 @@ function SignUp2() {
 
   const checkProfileSetup = () => {
     const token = localStorage.getItem('accessToken');
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile', {
+    fetch('/api/members/profile', {
       method: 'GET',
       headers: {
         'Authorization': `Bearer ${token}`

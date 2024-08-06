@@ -12,8 +12,8 @@ function MessageMain() {
 
   useEffect(() => {
     const token = localStorage.getItem('accessToken');
-    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/thanks', {
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/thanks', {
+    //fetch('/api/matches/thanks', {
+    fetch('/api/matches/thanks', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -33,7 +33,7 @@ function MessageMain() {
   // useEffect(() => {
   //   const interval = setInterval(() => {
   //     const token = localStorage.getItem('accessToken');
-  //   fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/thanks', {
+  //   fetch('/api/matches/thanks', {
   //     method: 'GET',
   //     headers: {
   //       'Content-Type': 'application/json',

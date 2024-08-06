@@ -14,7 +14,7 @@ function RequestMain() {
   const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/candidates', {
+        fetch('/api/matches/candidates', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ function RequestMain() {
 
   //   useEffect(() => {
   //   const interval = setInterval(() => {
-  //     fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/candidates', {
+  //     fetch('/api/matches/candidates', {
   //       method: 'GET',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function RequestMain() {
     setSelectedOption(newStatus);
     localStorage.setItem('selectedOption', newStatus);
 
-    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/filters/side', {
+    fetch('/api/filters/side', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
