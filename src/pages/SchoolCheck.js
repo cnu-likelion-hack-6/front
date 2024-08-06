@@ -94,6 +94,7 @@ function SchoolCheck() {
         if (response.status === 200) {
           setCodeCertificate(true);
           alert("이메일 인증이 완료되었습니다.");
+          navigate('/Profile1');
         } else {
           alert("인증에 실패했습니다.");
         }

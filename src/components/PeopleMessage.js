@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
 import SendButton from "./SendButton";
-import '../styles/PeopleLike.css';
 import send from "../images/send.png";
+import '../styles/PeopleLike.css';
 
 function PeopleMessage({ matchId, thankMessage, setThankMessage, handleSendMessage }) {
   

@@ -107,6 +107,21 @@ function MatchingMain() {
                     }
                 )}
             </div>
+            <PeopleKakao
+                key={0}
+                matchId={0}
+                name={"박지훈"}
+                profileIcon={"ICON_1"}
+                memberId={1}
+                kakaoId={"adff"}
+                universityName={"충남대"}
+                major={"ㅇㅇ"}
+                grade={22}
+                classOf={"ㅇㅇ"}
+                age={2}
+                brief={"ㅁㅇㄻ"}
+                keywords={[]}
+                            />
 
             <BottomNav/>
         </div>
