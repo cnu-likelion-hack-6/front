@@ -14,7 +14,7 @@ function RequestMain() {
   const navigate = useNavigate();
 
     useEffect(() => {
-        fetch('http://54.224.216.192:8080/matches/candidates', {
+        fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/candidates', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ function RequestMain() {
 
   //   useEffect(() => {
   //   const interval = setInterval(() => {
-  //     fetch('http://54.224.216.192:8080/matches/candidates', {
+  //     fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches/candidates', {
   //       method: 'GET',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -57,7 +57,7 @@ function RequestMain() {
     setSelectedOption(newStatus);
     localStorage.setItem('selectedOption', newStatus);
 
-    fetch('http://54.224.216.192:8080/filters/side', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/filters/side', {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',

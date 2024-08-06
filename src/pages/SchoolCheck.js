@@ -21,7 +21,7 @@ function SchoolCheck() {
   const handleSchoolEmailCheck = () => {
     const token = localStorage.getItem('accessToken');
 
-    fetch('http://54.224.216.192:8080/members/profile/email/send-code', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile/email/send-code', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -46,7 +46,7 @@ function SchoolCheck() {
   const getUniversityName = () => {
     const token = localStorage.getItem('accessToken');
 
-    fetch(`http://54.224.216.192:8080/members/university-by-email?email=${email}`, {
+    fetch(`https://melodic-valkyrie-f0a3b6.netlify.app/members/university-by-email?email=${email}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -81,8 +81,8 @@ function SchoolCheck() {
   const handleCodeCertificate = () => {
     const token = localStorage.getItem('accessToken');
 
-    //fetch('http://54.224.216.192:8080/members/profile/email/certificate', {
-    fetch('http://54.224.216.192:8080/members/profile/email/certificate', {
+    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile/email/certificate', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/members/profile/email/certificate', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

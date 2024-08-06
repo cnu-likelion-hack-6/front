@@ -32,7 +32,7 @@ function People({ memberId, profileIcon, name, universityName, major, grade, cla
     const token = localStorage.getItem('accessToken');
     console.log('Access Token:', token);
 
-    fetch('http://54.224.216.192:8080/matches', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/matches', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

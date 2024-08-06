@@ -24,8 +24,8 @@ function Filter() {
       departmentCondition: differentDepartment === "yes" ? "BOTH" : "ONLY_SAME"
     };
 
-    //fetch('http://54.224.216.192:8080/filters', {
-    fetch('http://54.224.216.192:8080/filters', {
+    //fetch('https://melodic-valkyrie-f0a3b6.netlify.app/filters', {
+    fetch('https://melodic-valkyrie-f0a3b6.netlify.app/filters', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

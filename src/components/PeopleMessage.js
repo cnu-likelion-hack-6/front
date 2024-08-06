@@ -12,7 +12,7 @@ function PeopleMessage({ matchId, thankMessage, setThankMessage, handleSendMessa
     }
 
     const token = localStorage.getItem('accessToken');
-    fetch(`http://54.224.216.192:8080/matches/${matchId}/thanks`, {
+    fetch(`https://melodic-valkyrie-f0a3b6.netlify.app/matches/${matchId}/thanks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
