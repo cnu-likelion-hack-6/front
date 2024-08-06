@@ -15,6 +15,7 @@ function SignUp1() {
   const [ isPasswordMatch, setIsPasswordMatch ] = useState(true);
   const [ nextPage, setNextPage ] = useState('회원 가입하기');
 
+  // POST : 회원가입 
   const signUp = () => {
     fetch('/api/members', {
       method: 'POST',

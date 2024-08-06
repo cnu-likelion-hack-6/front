@@ -9,10 +9,10 @@ import '../styles/AcceptMain.css';
 function MatchingMain() {
     const [peopleData, setPeopleData] = useState([]);
 
+    // GET : 밥약(매치) 이력 조회 
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
 
-        //fetch('/api/matches', {
         fetch('/api/matches', {
             method: 'GET',
             headers: {

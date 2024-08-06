@@ -10,9 +10,9 @@ import '../styles/AcceptMain.css';
 function MessageMain() {
   const [messages, setMessages] = useState([]);
 
+  // GET : 받은 감사 인사 조회
   useEffect(() => {
     const token = localStorage.getItem('accessToken');
-    //fetch('/api/matches/thanks', {
     fetch('/api/matches/thanks', {
       method: 'GET',
       headers: {

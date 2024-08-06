@@ -14,6 +14,7 @@ function Filter() {
   const [yearRange, setYearRange] = useState({ start: "", end: "" });
   const [differentDepartment, setDifferentDepartment] = useState("");
 
+  // POST : 필터 설정 ( 생성, 수정 )
   const handleNextClick = () => {
     const filterData = {
       minAge: ageRange[0],

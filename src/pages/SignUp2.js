@@ -13,6 +13,7 @@ function SignUp2() {
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ userName, setUserName ] = useState('');
 
+  // POST : 로그인 
   const logIn = () => {
     fetch('/api/members/login', {
       method: "POST",
@@ -39,6 +40,8 @@ function SignUp2() {
       })
   }
 
+  // GET : 프로필 설정 여부 확인
+  // 프로필 설정을 했다면, Main 페이지로 이동
   const checkProfileSetup = () => {
     const token = localStorage.getItem('accessToken');
     fetch('/api/members/profile', {
@@ -72,6 +75,7 @@ function SignUp2() {
     setNextPage("다음 단계");
   }
 
+  // Enter 키로 다음 페이지 이동
   const onCheckEnter = (e) => {
     if (e.key === 'Enter') {
       handleNextStep();

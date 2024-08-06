@@ -12,6 +12,7 @@ function KakaoId() {
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const navigate = useNavigate();
 
+  // POST : 카카오톡 ID 설정 
   const kakaoIdInput = () => {
     const token = localStorage.getItem('accessToken');
 

@@ -5,6 +5,8 @@ import '../styles/PeopleLike.css';
 import send from "../images/send.png";
 
 function PeopleMessage({ matchId, thankMessage, setThankMessage, handleSendMessage }) {
+  
+  // POST : 감사 인사 작성
   const handleSendMessageClick = () => {
     if (!matchId) {
       alert("매칭 ID 가 유효하지 않습니다.");

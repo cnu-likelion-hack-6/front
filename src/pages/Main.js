@@ -35,8 +35,8 @@ function Main() {
   const [ profileIcon, setProfileIcon ] = useState(null);
 
 
+  // GET : 내 정보 조회 
   useEffect(() => {
-    //fetch('/api/members/my', {
     fetch('/api/members/my', {
       method: 'GET',
       headers: {
@@ -63,6 +63,7 @@ function Main() {
   }, []);
 
 
+  // PUT : 밥약 신청 상태 변경 
   const handleComplete = () => {
     if (!selectedOption) {
       alert('옵션을 선택해주세요.');
@@ -72,7 +73,6 @@ function Main() {
 
     const token = localStorage.getItem('accessToken');
 
-    //fetch('/api/filters/side', {
     fetch('/api/filters/side', {
       method: 'PUT',
       headers: {

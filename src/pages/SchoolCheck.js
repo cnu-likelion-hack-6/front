@@ -16,8 +16,9 @@ function SchoolCheck() {
   const [ nextPage, setNextPage ] = useState('다음 단계');
   const [ isError, setIsError ] = useState(true);
   
+  const [ codeCertificate, setCodeCertificate ] = useState(false);
+  
   // POST : email 로 인증 코드 전송
-  // 오류 발생 : 인증 코드 전송에 실패했습니다.
   const handleSchoolEmailCheck = () => {
     const token = localStorage.getItem('accessToken');
 
@@ -81,7 +82,6 @@ function SchoolCheck() {
   const handleCodeCertificate = () => {
     const token = localStorage.getItem('accessToken');
 
-    //fetch('/api/members/profile/email/certificate', {
     fetch('/api/members/profile/email/certificate', {
       method: 'POST',
       headers: {
@@ -91,7 +91,12 @@ function SchoolCheck() {
       body: JSON.stringify({code: code})
     })
       .then(response => {
-        alert("이메일 인증이 완료되었습니다.")
+        if (response.message === "이메일 확인코드가 일치하지 않습니다.") {
+          alert(response.message);
+        } else {
+          setCodeCertificate(true);
+          alert("이메일 인증이 완료되었습니다.");
+        }
       })
       .catch(error => {
         console.error('Error:', error);
@@ -110,11 +115,14 @@ function SchoolCheck() {
       setIsError(false);
       return;
     }
+    if (codeCertificate) {
+      navigate('/Profile1');
+    }
     setIsError(true);
     setNextPage('다음 단계');
-    navigate('/Profile1');
   }
 
+  // Enter 키로 다음 페이지 이동
   const onCheckEnter = (e) => {
     if (e.key === 'Enter') {
       handleNextStep();

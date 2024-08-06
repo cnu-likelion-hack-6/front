@@ -13,6 +13,7 @@ function RequestMain() {
   const [selectedOption, setSelectedOption] = useState(localStorage.getItem('selectedOption') || 'BOTH');
   const navigate = useNavigate();
 
+  // GET : 밥약(매치) 가능한 사람들 조회
     useEffect(() => {
         fetch('/api/matches/candidates', {
             method: 'GET',
@@ -53,6 +54,7 @@ function RequestMain() {
   //   return () => clearInterval(interval);
   // }, []);
 
+  // PUT : 밥약 신청 상태 변경
   const handleStatusChange = (newStatus) => {
     setSelectedOption(newStatus);
     localStorage.setItem('selectedOption', newStatus);
@@ -74,6 +76,7 @@ function RequestMain() {
     });
   }
 
+  // 필터 재설정 
   const onClickFilter = () => {
     navigate('/filter');
   }

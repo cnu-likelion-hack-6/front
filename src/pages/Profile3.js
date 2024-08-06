@@ -47,6 +47,7 @@ function Profile3({ profileData }) {
     };
     console.log('result: ', finalProfileData);
 
+    // POST : 프로필 설정 
     fetch('/api/members/profile', {
       method: 'POST',
       headers: {

@@ -31,6 +31,7 @@ function AcceptMain() {
   //   return () => clearInterval(interval);
   // }, []);
 
+  // GET : 처리하지 않은 밥약(매치) 요청 보기
   useEffect(() => {
     fetch('/api/matches/acceptable-match-request', {
       method: 'GET',

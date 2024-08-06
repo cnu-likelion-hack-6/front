@@ -28,6 +28,7 @@ const profileIconMap = {
 
 function People({ memberId, profileIcon, name, universityName, major, grade, classOf, age, brief, keywords, side }) {
   
+  // POST : 밥약(매치) 요청 보내기
   const handleMatchRequest = () => {
     const token = localStorage.getItem('accessToken');
     console.log('Access Token:', token);
