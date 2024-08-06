@@ -90,21 +90,12 @@ function SchoolCheck() {
       },
       body: JSON.stringify({code: code})
     })
-      // .then(response => {
-      //   // if (response.message === "이메일 확인코드가 일치하지 않습니다.") {
-      //   //   alert(response.message);
-      //   // } else {
-      //   //   setCodeCertificate(true);
-      //   //   alert("이메일 인증이 완료되었습니다.");
-      //   // }
-      //   alert(response.message);
-      // })
-      .then(result => {
-        if (result.status === 200) {
+      .then(response => {
+        if (response.status === 200) {
           setCodeCertificate(true);
           alert("이메일 인증이 완료되었습니다.");
         } else {
-          alert(result.message);
+          alert(response.message);
         }
       })
       .catch(error => {
