@@ -1,2 +1,2 @@
-/api/* https://melodic-valkyrie-f0a3b6.netlify.app/:splat 200
+/api/* http://54.224.216.192:8080/:splat 200
 /* /index.html 200
