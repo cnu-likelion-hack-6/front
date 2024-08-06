@@ -10,11 +10,11 @@ function KakaoId() {
   const [ kakaoId, setKakaoId ] = useState('');
   const [ isError, setIsError ] = useState(true);
   const [ nextPage, setNextPage ] = useState('다음 단계');
+  const navigate = useNavigate();
 
   const kakaoIdInput = () => {
     const token = localStorage.getItem('accessToken');
 
-    //fetch('/api/members/profile/kakaoId', {
     fetch('/api/members/profile/kakaoId', {
       method: 'POST',
       headers: {
@@ -28,7 +28,7 @@ function KakaoId() {
           alert(result.message);
         }
         console.log("결과 : ", result);
-        Navigate('/SchoolCheck');
+        navigate('/SchoolCheck');
       })
   }
 

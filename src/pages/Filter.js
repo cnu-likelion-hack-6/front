@@ -24,7 +24,6 @@ function Filter() {
       departmentCondition: differentDepartment === "yes" ? "BOTH" : "ONLY_SAME"
     };
 
-    //fetch('/api/filters', {
     fetch('/api/filters', {
       method: 'POST',
       headers: {

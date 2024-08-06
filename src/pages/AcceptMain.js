@@ -32,7 +32,6 @@ function AcceptMain() {
   // }, []);
 
   useEffect(() => {
-    //fetch('/api/matches/acceptable-match-request', {
     fetch('/api/matches/acceptable-match-request', {
       method: 'GET',
       headers: {
