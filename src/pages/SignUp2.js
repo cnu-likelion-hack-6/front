@@ -55,7 +55,8 @@ function SignUp2() {
         if (data) {
           navigate('/Main');
         } else {
-          navigate('/ProfileSetup');
+          alert("프로필을 설정해주세요.");
+          navigate('/KakaoId');
         }
       })
       .catch(error => {
