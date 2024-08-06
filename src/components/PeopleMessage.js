@@ -12,7 +12,7 @@ function PeopleMessage({ matchId, thankMessage, setThankMessage, handleSendMessa
     }
 
     const token = localStorage.getItem('accessToken');
-    fetch(`http://54.80.162.117:8080/matches/${matchId}/thanks`, {
+    fetch(`http://54.224.216.192:8080/matches/${matchId}/thanks`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

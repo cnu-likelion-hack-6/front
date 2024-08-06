@@ -12,8 +12,8 @@ function MatchingMain() {
     useEffect(() => {
         const token = localStorage.getItem('accessToken');
 
-        //fetch('http://54.80.162.117:8080/matches', {
-        fetch('http://54.80.162.117:8080/matches', {
+        //fetch('http://54.224.216.192:8080/matches', {
+        fetch('http://54.224.216.192:8080/matches', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
@@ -35,7 +35,7 @@ function MatchingMain() {
     //     const interval = setInterval(() => {
     //         const token = localStorage.getItem('accessToken');
     //
-    //         fetch('http://54.80.162.117:8080/matches', {
+    //         fetch('http://54.224.216.192:8080/matches', {
     //             method: 'GET',
     //             headers: {
     //                 'Content-Type': 'application/json',

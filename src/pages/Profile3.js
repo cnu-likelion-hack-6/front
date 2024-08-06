@@ -47,7 +47,7 @@ function Profile3({ profileData }) {
     };
     console.log('result: ', finalProfileData);
 
-    fetch('http://54.80.162.117:8080/members/profile', {
+    fetch('http://54.224.216.192:8080/members/profile', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

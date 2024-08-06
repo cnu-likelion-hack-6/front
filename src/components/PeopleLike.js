@@ -37,7 +37,7 @@ function PeopleLike({ side, matchRequestId, name, profileIcon, universityName, m
   const token = localStorage.getItem('accessToken');
 
   const acceptMatchRequest = () => {
-    fetch(`http://54.80.162.117:8080/matches/${matchRequestId}/accept`, {
+    fetch(`http://54.224.216.192:8080/matches/${matchRequestId}/accept`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ function PeopleLike({ side, matchRequestId, name, profileIcon, universityName, m
     });
   };
   const rejectMatchRequest = () => {
-    fetch(`http://54.80.162.117:8080/matches/${matchRequestId}/reject`, {
+    fetch(`http://54.224.216.192:8080/matches/${matchRequestId}/reject`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

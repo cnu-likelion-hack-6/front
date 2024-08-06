@@ -12,7 +12,7 @@ function AcceptMain() {
   
   // useEffect(() => {
   //   const interval = setInterval(() => {
-  //     fetch('http://54.80.162.117:8080/matches/acceptable-match-request', {
+  //     fetch('http://54.224.216.192:8080/matches/acceptable-match-request', {
   //       method: 'GET',
   //       headers: {
   //         'Content-Type': 'application/json',
@@ -32,8 +32,8 @@ function AcceptMain() {
   // }, []);
 
   useEffect(() => {
-    //fetch('http://54.80.162.117:8080/matches/acceptable-match-request', {
-    fetch('http://54.80.162.117:8080/matches/acceptable-match-request', {
+    //fetch('http://54.224.216.192:8080/matches/acceptable-match-request', {
+    fetch('http://54.224.216.192:8080/matches/acceptable-match-request', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
